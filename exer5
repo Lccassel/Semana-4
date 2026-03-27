@@ -1,0 +1,10 @@
+# Leitura da resposta do atleta
+resposta = input("Digite a alternativa (A, B, C ou D): ").upper()
+
+# Verificação da resposta
+if resposta == "B":
+    print("Resposta correta! Você acertou.")
+elif resposta in ["A", "C", "D"]:
+    print("Resposta incorreta! Você errou.")
+else:
+    print("Alternativa inválida!")
