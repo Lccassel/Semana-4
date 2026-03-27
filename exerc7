@@ -1,0 +1,32 @@
+# Leitura da opção do kit
+print("Escolha o kit desejado:")
+print("1 - Kit Básico (R$100,00)")
+print("2 - Kit Plus (R$120,00)")
+print("3 - Kit Premium (R$150,00)")
+
+kit = int(input("Digite a opção do kit (1, 2 ou 3): "))
+valor_entregue = float(input("Digite o valor que você está entregando (R$): "))
+
+# Definindo valores e descrição dos kits
+if kit == 1:
+    valor_kit = 100
+    descricao = "Kit Básico"
+elif kit == 2:
+    valor_kit = 120
+    descricao = "Kit Plus"
+elif kit == 3:
+    valor_kit = 150
+    descricao = "Kit Premium"
+else:
+    valor_kit = None
+    print("Opção de kit inválida!")
+
+# Verificando se o valor é suficiente e calculando troco
+if valor_kit is not None:
+    if valor_entregue >= valor_kit:
+        troco = valor_entregue - valor_kit
+        print(f"Inscrição confirmada! Você escolheu o {descricao}.")
+        print(f"Troco: R$ {troco:.2f}")
+    else:
+        falta = valor_kit - valor_entregue
+        print(f"Valor insuficiente! Faltam R$ {falta:.2f} para completar o {descricao}.")
