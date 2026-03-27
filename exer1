@@ -1,0 +1,33 @@
+valor_carro = float(input("Digite o valor do carro: "))
+
+print("\nForma de pagamento:")
+print("1 - À vista (4% de desconto)")
+print("2 - 12x (2% de juros)")
+print("3 - 24x (7% de juros)")
+print("4 - 36x (15% de juros)")
+
+forma = int(input("Escolha a opção: "))
+
+if forma == 1:
+    valor_final = valor_carro * 0.96
+    parcelas = 1
+elif forma == 2:
+    valor_final = valor_carro * 1.02
+    parcelas = 12
+elif forma == 3:
+    valor_final = valor_carro * 1.07
+    parcelas = 24
+elif forma == 4:
+    valor_final = valor_carro * 1.15
+    parcelas = 36
+else:
+    print("Opção inválida!")
+    exit()
+
+valor_parcela = valor_final / parcelas
+
+print("\n--- Resultado ---")
+print(f"Valor original: R$ {valor_carro:.2f}")
+print(f"Valor final: R$ {valor_final:.2f}")
+print(f"Parcelas: {parcelas}x")
+print(f"Valor de cada parcela: R$ {valor_parcela:.2f}")
