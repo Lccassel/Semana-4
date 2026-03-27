@@ -1,0 +1,29 @@
+# Leitura do valor base do ingresso
+valor_base = float(input("Digite o valor base do ingresso: R$ "))
+
+# Exibir opções
+print("Escolha o tipo de ingresso:")
+print("1 - Normal")
+print("2 - Estudante (50% de desconto)")
+print("3 - Criança até 12 anos (paga 40%)")
+print("4 - Idoso (paga 60%)")
+
+# Leitura da opção
+opcao = int(input("Digite a opção: "))
+
+# Cálculo do valor a pagar
+if opcao == 1:
+    valor_final = valor_base
+elif opcao == 2:
+    valor_final = valor_base * 0.5
+elif opcao == 3:
+    valor_final = valor_base * 0.4
+elif opcao == 4:
+    valor_final = valor_base * 0.6
+else:
+    valor_final = None
+    print("Opção inválida!")
+
+# Exibir valor a pagar, se válido
+if valor_final is not None:
+    print(f"Valor a pagar: R$ {valor_final:.2f}")
